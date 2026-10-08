@@ -1,0 +1,25 @@
+{
+  "commands": [
+    {
+      "stage": 1,
+      "syntax_exit": 0,
+      "execution_exit": 0,
+      "output_lines": 7
+    },
+    {
+      "stage": 2,
+      "syntax_exit": 0,
+      "execution_exit": 0,
+      "output_lines": 211
+    },
+    {
+      "stage": 3,
+      "syntax_exit": 0,
+      "execution_exit": 0,
+      "output_lines": 6
+    }
+  ],
+  "findings_count": 12,
+  "raw_logs_included": false,
+  "firmware_pinning_validated": false
+}

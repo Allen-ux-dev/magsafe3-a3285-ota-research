@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "sample": {
+    "macOS": "26.3.2",
+    "build": "25D2150",
+    "architecture": "arm64e",
+    "research_date": "2026-10-07",
+    "timezone": "America/Toronto"
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "status": "confirmed_static",
+      "topic": "primary_model",
+      "value": "A3285",
+      "component": "CoreUARP",
+      "address": "0x19F545890",
+      "limitation": "Not a runtime identity observation"
+    },
+    {
+      "id": "F02",
+      "status": "confirmed_static",
+      "topic": "alternative_model",
+      "value": "A2363",
+      "component": "CoreUARP",
+      "address": "0x19F54589C",
+      "limitation": "Legacy class name is A2363"
+    },
+    {
+      "id": "F03",
+      "status": "confirmed_static",
+      "topic": "product_id",
+      "value": "0x7800",
+      "component": "CoreUARP",
+      "address": "0x19F5458D0",
+      "limitation": "Does not establish a preference key"
+    },
+    {
+      "id": "F04",
+      "status": "confirmed_static",
+      "topic": "database_collection",
+      "value": "accessories",
+      "component": "accessoryupdaterd",
+      "address": "0x1000050D0",
+      "limitation": "Daemon preference context matters"
+    },
+    {
+      "id": "F05",
+      "status": "confirmed_static",
+      "topic": "per_record_ota_key",
+      "value": "isOTADisabled",
+      "component": "accessoryupdaterd",
+      "address": "0x100006AD8",
+      "limitation": "Not equivalent to the property name otaDisabled"
+    },
+    {
+      "id": "F06",
+      "status": "confirmed_static",
+      "topic": "automatic_disable_output",
+      "value": "true on OTA-disabled branch",
+      "component": "accessoryupdaterd",
+      "address": "0x100037FF0",
+      "limitation": "A3285 runtime reachability remains unverified"
+    },
+    {
+      "id": "F07",
+      "status": "confirmed_static",
+      "topic": "query_gate",
+      "value": "supportsInternalSettings and no remoteURL",
+      "component": "accessoryupdaterd",
+      "address": "0x100038D24",
+      "limitation": "Additional caller conditions exist"
+    },
+    {
+      "id": "F08",
+      "status": "confirmed_static",
+      "topic": "daemon_dictionary_match",
+      "value": "first dot-separated identifier component",
+      "component": "accessoryupdaterd",
+      "address": "0x10001B884",
+      "limitation": "One of multiple consumers"
+    },
+    {
+      "id": "F09",
+      "status": "confirmed_static",
+      "topic": "usbpd_dictionary_match",
+      "value": "full identifier; skip further addition",
+      "component": "UARPUpdaterServiceUSBPD",
+      "address": "0x1000061C0",
+      "limitation": "Charging impact untested"
+    },
+    {
+      "id": "F10",
+      "status": "confirmed_static",
+      "topic": "identifier_rule",
+      "value": "productGroup+productNumber else appleModelNumber",
+      "component": "CoreUARP",
+      "address": "0x19F58FFB4",
+      "limitation": "Format is %@%@ without an inserted delimiter"
+    },
+    {
+      "id": "F11",
+      "status": "inference",
+      "topic": "candidate_default_identifier",
+      "value": "A3285",
+      "component": "CoreUARP",
+      "address": "0x19F545680",
+      "limitation": "No preference-writing recommendation"
+    },
+    {
+      "id": "F12",
+      "status": "unverified",
+      "topic": "firmware_pinning_with_normal_charging",
+      "value": "not demonstrated",
+      "component": "",
+      "address": "",
+      "limitation": "Current cable firmware has not been reconfirmed"
+    }
+  ]
+}

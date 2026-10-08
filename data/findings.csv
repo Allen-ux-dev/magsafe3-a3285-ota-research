@@ -1,0 +1,13 @@
+id,status,topic,value,component,address,limitation
+F01,confirmed_static,primary_model,A3285,CoreUARP,0x19F545890,Not a runtime identity observation
+F02,confirmed_static,alternative_model,A2363,CoreUARP,0x19F54589C,Legacy class name is A2363
+F03,confirmed_static,product_id,0x7800,CoreUARP,0x19F5458D0,Does not establish a preference key
+F04,confirmed_static,database_collection,accessories,accessoryupdaterd,0x1000050D0,Daemon preference context matters
+F05,confirmed_static,per_record_ota_key,isOTADisabled,accessoryupdaterd,0x100006AD8,Not equivalent to the property name otaDisabled
+F06,confirmed_static,automatic_disable_output,true on OTA-disabled branch,accessoryupdaterd,0x100037FF0,A3285 runtime reachability remains unverified
+F07,confirmed_static,query_gate,supportsInternalSettings and no remoteURL,accessoryupdaterd,0x100038D24,Additional caller conditions exist
+F08,confirmed_static,daemon_dictionary_match,first dot-separated identifier component,accessoryupdaterd,0x10001B884,One of multiple consumers
+F09,confirmed_static,usbpd_dictionary_match,full identifier; skip further addition,UARPUpdaterServiceUSBPD,0x1000061C0,Charging impact untested
+F10,confirmed_static,identifier_rule,productGroup+productNumber else appleModelNumber,CoreUARP,0x19F58FFB4,Format is %@%@ without an inserted delimiter
+F11,inference,candidate_default_identifier,A3285,CoreUARP,0x19F545680,No preference-writing recommendation
+F12,unverified,firmware_pinning_with_normal_charging,not demonstrated,,,Current cable firmware has not been reconfirmed

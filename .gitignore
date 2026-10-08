@@ -1,0 +1,8 @@
+.DS_Store
+__MACOSX/
+*.log
+*.plist
+raw/
+private/
+work/
+.git/
